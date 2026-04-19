@@ -15,9 +15,8 @@ const Login = () => {
     setError('');
     
     try {
-      // For demonstration, we'll simulate a successful login 
-      // In a real app, this would be an API call to http://localhost:5000/api/auth/login
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      // In a real app, this would be an API call to /api/auth/login
+      const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -29,10 +28,10 @@ const Login = () => {
         login(data.user, data.token);
         navigate('/dashboard');
       } else {
-        setError(data.msg || 'Login failed');
+        setError(data.msg || data.error || 'Login failed');
       }
     } catch (err) {
-      setError('Server connection failed. Make sure the backend is running.');
+      setError(err.message || 'Server connection failed. Make sure the backend is running.');
     }
   };
 
