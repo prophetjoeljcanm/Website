@@ -21,19 +21,23 @@ app.use('/api/dashboard', require('./routes/dashboard'));
 // Test Route
 app.get('/', (req, res) => res.send('Ministry API Running'));
 
-// DB Connection & Server Start
-app.listen(PORT, () => {
-  console.log(`🚀 API Server running on port ${PORT}`);
-  console.log(`🔗 Proxy target: http://localhost:${PORT}`);
-  
-  mongoose.connect(MONGO_URI)
-    .then(() => {
-      console.log('✅ Connected to MongoDB successfully');
-    })
-    .catch(err => {
-      console.error('❌ MongoDB connection error:');
-      console.error(err.message);
-      console.log('\nTIP: Make sure your MongoDB service is running.');
-      console.log('If you are using local MongoDB, run "mongod" in a separate terminal.');
-    });
-});
+// DB Connection
+mongoose.connect(MONGO_URI)
+  .then(() => {
+    console.log('✅ Connected to MongoDB successfully');
+  })
+  .catch(err => {
+    console.error('❌ MongoDB connection error:');
+    console.error(err.message);
+  });
+
+// Server Start (Only if not running in Vercel serverless environment)
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 API Server running on port ${PORT}`);
+    console.log(`🔗 Proxy target: http://localhost:${PORT}`);
+  });
+}
+
+// Export the app for Vercel
+module.exports = app;

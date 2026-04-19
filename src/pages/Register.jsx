@@ -27,10 +27,10 @@ const Register = () => {
         login(data.user, data.token);
         navigate('/');
       } else {
-        setError(data.msg || 'Registration failed');
+        setError(data.msg || data.error || 'Registration failed. Please check the server logs.');
       }
     } catch (err) {
-      setError('Server connection failed. Make sure the backend is running.');
+      setError(err.message || 'Server connection failed. Make sure the backend is running.');
     }
   };
 
