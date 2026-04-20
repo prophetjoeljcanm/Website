@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/abieljoel';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://Vercel-Admin-atlas-charcoal-crystal:Pranab2026@atlas-charcoal-crystal.ecspmwz.mongodb.net/abieljoel?retryWrites=true&w=majority&appName=atlas-charcoal-crystal';
 
 // Middleware
 app.use(cors());
