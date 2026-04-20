@@ -4,7 +4,7 @@ import { Target, Heart, Eye, Globe } from 'lucide-react';
 import PropheticBackground from '../components/PropheticBackground';
 
 const About = () => {
-  const visionImage = "/src/assets/logo.png";
+  const visionImage = "/Images/new.png";
 
   return (
     <div className="pt-24 min-h-screen bg-white">

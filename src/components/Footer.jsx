@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
             <div className="mb-6 flex items-center gap-3">
-              <img src="/src/assets/logo.png" alt="JCANM Logo" className="h-16 object-contain" />
+              <img src="/Images/new logo of JCANM.png" alt="JCANM Logo" className="h-16 object-contain" />
             </div>
             <p className="text-accent-charcoal/60 text-sm leading-relaxed mb-6">
               Jesus Christ Anointing Nations Ministry (JCANM) is a Global Prophetic Movement dedicated to transforming lives through Kingdom Authority and Holy Spirit power.

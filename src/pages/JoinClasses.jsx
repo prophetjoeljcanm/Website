@@ -102,7 +102,7 @@ const JoinClasses = () => {
           >
             <div className="mb-6 relative">
               <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full"></div>
-              <img src="/src/assets/logo.png" alt="JCANM Logo" className="h-24 md:h-32 relative z-10 drop-shadow-2xl" />
+              <img src="/Images/Prophetical Classes.png" alt="Prophetical Classes Poster" className="h-24 md:h-32 relative z-10 drop-shadow-2xl" />
             </div>
             
             <motion.h4 

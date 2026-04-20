@@ -30,7 +30,7 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass-nav py-5 shadow-md' : 'bg-transparent py-8'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center group">
-          <img src="/src/assets/logo.png" alt="JCANM Logo" className="h-14 md:h-28 object-contain transition-all" />
+          <img src="/Images/new logo of JCANM.png" alt="JCANM Logo" className="h-14 md:h-28 object-contain transition-all" />
         </Link>
 
         {/* Desktop Links */}
