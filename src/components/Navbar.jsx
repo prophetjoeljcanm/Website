@@ -49,9 +49,11 @@ const Navbar = () => {
 
           {user ? (
             <div className="flex items-center gap-6">
-              <Link to="/dashboard" className="text-sm font-bold uppercase tracking-widest text-primary hover:text-accent-charcoal transition-colors">
-                Dashboard
-              </Link>
+              {user.role === 'admin' && (
+                <Link to="/dashboard" className="text-sm font-bold uppercase tracking-widest text-primary hover:text-accent-charcoal transition-colors">
+                  Dashboard
+                </Link>
+              )}
               <div className="h-6 w-px bg-primary/20"></div>
               <div className="flex items-center gap-2 text-accent-charcoal/70">
                 <User className="w-4 h-4 text-primary" />

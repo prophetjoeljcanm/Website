@@ -12,7 +12,7 @@ import Media from './pages/Media';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
-import ProtectedRoute from './components/ProtectedRoute';
+import ProtectedRoute, { AdminRoute } from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
           <Route path="/join" element={<ProtectedRoute><JoinClasses /></ProtectedRoute>} />
           <Route path="/contact" element={<ProtectedRoute><PrayerContact /></ProtectedRoute>} />
           <Route path="/media" element={<ProtectedRoute><Media /></ProtectedRoute>} />
-          <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+          <Route path="/dashboard" element={<AdminRoute><Dashboard /></AdminRoute>} />
         </Routes>
       </main>
       <Footer />
