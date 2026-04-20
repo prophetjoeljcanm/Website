@@ -13,8 +13,8 @@ const seedDB = async () => {
     if (!adminExists) {
       const admin = new User({
         name: 'Prophet Admin',
-        email: 'admin@abieljoel.org',
-        password: 'ProphetAdmin2024!', 
+        email: 'prophetjoeljcanm@gmail.com',
+        password: 'admin28', 
         role: 'admin'
       });
       await admin.save();
