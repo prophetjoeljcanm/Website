@@ -29,9 +29,11 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass-nav py-5 shadow-md' : 'bg-transparent py-8'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center group">
-          <img src="/Images/new logo of JCANM.png" alt="JCANM Logo" className="h-14 md:h-28 object-contain transition-all" />
-        </Link>
+        {location.pathname !== '/dashboard' && (
+          <Link to="/" className="flex items-center group">
+            <img src="/Images/new logo of JCANM.png" alt="JCANM Logo" className="h-14 md:h-28 object-contain transition-all" />
+          </Link>
+        )}
 
         {/* Desktop Links */}
         <div className="hidden lg:flex space-x-10 items-center">
