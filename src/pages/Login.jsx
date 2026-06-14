@@ -83,6 +83,9 @@ const Login = () => {
                 required
               />
             </div>
+            <div className="text-right pt-2">
+              <Link to="/forgot-password" className="text-xs text-primary font-bold hover:underline">Forgot Password?</Link>
+            </div>
           </div>
 
           <button type="submit" className="btn-primary w-full py-4 flex items-center justify-center gap-2 text-lg">

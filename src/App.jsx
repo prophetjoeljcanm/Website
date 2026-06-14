@@ -9,8 +9,11 @@ import Teachings from './pages/Teachings';
 import JoinClasses from './pages/JoinClasses';
 import PrayerContact from './pages/PrayerContact';
 import Media from './pages/Media';
+import AudioSeries from './pages/AudioSeries';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 import Dashboard from './pages/Dashboard';
 import ProtectedRoute, { AdminRoute } from './components/ProtectedRoute';
 
@@ -23,6 +26,8 @@ function App() {
           {/* Public Routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
           
           {/* Protected Routes */}
           <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
@@ -30,6 +35,7 @@ function App() {
           <Route path="/join" element={<ProtectedRoute><JoinClasses /></ProtectedRoute>} />
           <Route path="/contact" element={<ProtectedRoute><PrayerContact /></ProtectedRoute>} />
           <Route path="/media" element={<ProtectedRoute><Media /></ProtectedRoute>} />
+          <Route path="/audio-series" element={<ProtectedRoute><AudioSeries /></ProtectedRoute>} />
           <Route path="/dashboard" element={<AdminRoute><Dashboard /></AdminRoute>} />
         </Routes>
       </main>

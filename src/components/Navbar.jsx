@@ -24,6 +24,7 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
     { name: 'Join Classes', path: '/join' },
     { name: 'Media', path: '/media' },
+    { name: '100 Days Audio', path: '/audio-series' },
   ];
 
   return (
